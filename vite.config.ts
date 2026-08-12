@@ -1,22 +1,12 @@
 import { defineConfig } from "vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
-import viteReact from "@vitejs/plugin-react";
+import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [
     tanstackStart(),
-    viteReact(),
+    react(),
     tailwindcss(),
   ],
-
-  resolve: {
-    alias: {
-      "@": `${process.cwd()}/src`,
-    },
-  },
-
-  ssr: {
-    noExternal: ["gsap"],
-  },
 });

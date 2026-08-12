@@ -3,4 +3,10 @@ command = "npm run build"
 publish = "dist/client"
 
 [functions]
+directory = ".netlify/v1/functions"
 node_bundler = "esbuild"
+
+[[redirects]]
+from = "/*"
+to = "/.netlify/functions/server"
+status = 200

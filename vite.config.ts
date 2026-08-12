@@ -19,6 +19,10 @@ export default defineConfig({
   },
 
   ssr: {
-    noExternal: ["gsap"],
+    noExternal: [
+      "gsap",
+      "gsap/ScrollTrigger",
+      "gsap/ScrollToPlugin",
+    ],
   },
 });
